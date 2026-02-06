@@ -1,0 +1,122 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+    padding: 0.8rem 0;
+    background: rgba(5, 5, 5, 0.8);
+    backdrop-filter: blur(10px);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logoIcon {
+    color: var(--accent-blue);
+}
+
+.logoText {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg, #fff 0%, #aaa 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.desktopNav {
+    display: none;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.navLink {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: #fff;
+}
+
+.ctaButton {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    color: #fff;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.mobileToggle {
+    display: block;
+}
+
+.iconButton {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.mobileNav {
+    display: flex;
+    flex-direction: column;
+    background: rgba(10, 10, 15, 0.95);
+    padding: 1rem 2rem 2rem;
+    gap: 1.5rem;
+}
+
+.mobileNavLink {
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.mobileCta {
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+    color: #fff;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .desktopNav {
+        display: flex;
+    }
+
+    .mobileToggle {
+        display: none;
+    }
+}
