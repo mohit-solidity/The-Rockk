@@ -56,7 +56,7 @@ const About = () => {
                             ))}
                         </motion.p>
                         <p className={styles.bio}>
-                            Specializing in <strong>DeFi, Casino, GameFi, Layer-1, Meme, and AI</strong> sectors, I navigate the unique challenges of each niche to foster authentic connections and sustainable growth.
+                            Specializing in <strong>DeFi, Casino, GameFi, Layer-1, AI, and Swap Protocols</strong>, I navigate the unique challenges of each niche to foster authentic connections and sustainable growth.
                         </p>
 
                         <div className={styles.skillList}>
@@ -89,23 +89,23 @@ const About = () => {
                     <div className={styles.marqueeLabel}>Trusted by Communities at:</div>
                     <div className={styles.marquee}>
                         <div className={styles.marqueeContent}>
-                            <span>PancakeSwap</span>
-                            <span>Uniswap</span>
-                            <span>Stake</span>
-                            <span>BC.Game</span>
-                            <span>Axie Infinity</span>
-                            <span>The Sandbox</span>
-                            <span>Pepe</span>
-                            <span>Fetch.ai</span>
+                            <span>XY Finance</span>
+                            <span>Dynex</span>
+                            <span>Rakebit</span>
+                            <span>BetU</span>
+                            <span>Avocado DAO</span>
+                            <span>Clore</span>
+                            <span>BinaryX</span>
+                            <span>VaiotAI</span>
                             {/* Duplicate for seamless loop */}
-                            <span>PancakeSwap</span>
-                            <span>Uniswap</span>
-                            <span>Stake</span>
-                            <span>BC.Game</span>
-                            <span>Axie Infinity</span>
-                            <span>The Sandbox</span>
-                            <span>Pepe</span>
-                            <span>Fetch.ai</span>
+                            <span>XY Finance</span>
+                            <span>Dynex</span>
+                            <span>Rakebit</span>
+                            <span>BetU</span>
+                            <span>Avocado DAO</span>
+                            <span>Clore</span>
+                            <span>BinaryX</span>
+                            <span>VaiotAI</span>
                         </div>
                     </div>
                 </div>
