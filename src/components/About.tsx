@@ -7,7 +7,7 @@ import styles from "./About.module.css";
 
 const About = () => {
     const stats = [
-        { label: "Years in Web3", value: "3+", icon: <Award size={24} /> },
+        { label: "Years in Web3", value: "5+", icon: <Award size={24} /> },
         { label: "Projects Managed", value: "50+", icon: <ShieldCheck size={24} /> },
         { label: "Communities Scaled", value: "15+", icon: <Users size={24} /> },
         { label: "Categories Covered", value: "6+", icon: <Globe size={24} /> },
