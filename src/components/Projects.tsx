@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from "framer-motion";
+import Image from "next/image";
 import { ExternalLink } from "lucide-react";
 import styles from "./Projects.module.css";
 
@@ -15,7 +16,7 @@ const projectsData = [
         desc: "Advanced cross-chain interoperability protocol and liquidity aggregator for the multi-chain world.",
         impact: "Facilitating seamless asset swaps and bridging across 20+ blockchains with optimized rates.",
         twitter: "https://x.com/xyfinance",
-        image: "https://pbs.twimg.com/profile_images/1690983818365288448/7_hS5pM5_400x400.jpg",
+        image: "https://pbs.twimg.com/profile_images/1470075194286903297/ALMnRaAP_400x400.jpg",
     },
     // Casino
     {
@@ -71,15 +72,15 @@ const projectsData = [
         desc: "Leading GameFi guild and community hub, bridging the gap between players and the metaverse.",
         impact: "Empowered 10k+ scholars and established a dominant presence in the P2E ecosystem.",
         twitter: "https://x.com/avocadogdao",
-        image: "https://pbs.twimg.com/profile_images/1676839352226250752/O5eH5K_L_400x400.jpg",
+        image: "https://pbs.twimg.com/profile_images/1447613890272006144/SnBZ7oIs_400x400.jpg",
     },
     {
         name: "Rada Foundation",
         category: "GameFi",
         desc: "Decentralized football governance and talent recruitment platform powered by blockchain.",
         impact: "Revolutionizing the connection between fans, players, and clubs through transparent governance.",
-        twitter: "https://x.com/RADA_Foundation",
-        image: "https://pbs.twimg.com/profile_images/1666723222384156672/s_3C5z3S_400x400.jpg",
+        twitter: "https://x.com/crypto_rada",
+        image: "https://pbs.twimg.com/profile_images/1649235316644155393/y-j77dmp_400x400.jpg",
     },
 
     // L1
@@ -89,7 +90,7 @@ const projectsData = [
         desc: "Pioneering decentralized neuromorphic computing and blockchain-based supercomputing solutions.",
         impact: "Scaling the world's most advanced decentralized computing network for AI and scientific research.",
         twitter: "https://x.com/dynexcoin",
-        image: "https://pbs.twimg.com/profile_images/1857947700021501952/i-o7xRZx_400x400.jpg",
+        image: "https://pbs.twimg.com/profile_images/1648647889109827585/JLmTtf5v_400x400.jpg",
     },
 
     // AI
@@ -187,8 +188,8 @@ const ProjectCard = ({ project }: { project: any }) => {
                 onMouseMove={handleMouseMove}
                 onMouseLeave={handleMouseLeave}
                 style={{
-                    rotateX,
-                    rotateY,
+                    rotateX: typeof window !== 'undefined' && window.innerWidth > 768 ? rotateX : 0,
+                    rotateY: typeof window !== 'undefined' && window.innerWidth > 768 ? rotateY : 0,
                 }}
             >
                 <div className={styles.cardHeader}>
@@ -202,7 +203,14 @@ const ProjectCard = ({ project }: { project: any }) => {
                 </div>
 
                 <div className={styles.projectImageContainer}>
-                    <img src={project.image} alt={project.name} className={styles.projectImage} />
+                    <Image
+                        src={project.image}
+                        alt={project.name}
+                        className={styles.projectImage}
+                        width={400}
+                        height={400}
+                        unoptimized={false}
+                    />
                 </div>
 
                 <h3 className={styles.projectName}>{project.name}</h3>
